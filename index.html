@@ -1,189 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Romain — Portfolio</title>
-  <meta name="description" content="The portfolio of Romain — clean, minimal, and focused on imagery.">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#ffffff;
-      --text:#111111;
-      --muted:#666666;
-      --line:#eaeaea;
-      --accent:#111111;
-      --max:1100px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      line-height:1.65;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
-    }
-    a{color:var(--text); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:var(--max); margin:0 auto; padding:0 24px}
-    /* Header */
-    header{
-      position:sticky; top:0; z-index:10;
-      background:rgba(255,255,255,.85); backdrop-filter:saturate(130%) blur(8px);
-      border-bottom:1px solid var(--line);
-    }
-    .nav{display:flex; align-items:center; justify-content:space-between; padding:18px 0}
-    .brand{font-family:"Playfair Display", serif; letter-spacing:.5px; font-size:20px}
-    .menu{display:flex; gap:22px; font-size:14px; letter-spacing:.06em; text-transform:uppercase}
-    .menu a{opacity:.8} .menu a:hover{opacity:1}
-    /* Hero */
-    .hero{padding:36px 0 10px}
-    .intro{display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; margin-bottom:18px}
-    .intro .kicker{letter-spacing:.18em; text-transform:uppercase; font-size:12px; color:var(--muted)}
-    h1.name{
-      font-family:"Playfair Display", serif;
-      font-weight:500; font-size:clamp(28px,4vw,40px);
-      margin:0;
-    }
-    /* Feature image */
-    .feature{
-      width:100%; height:64vh; min-height:360px; border:1px solid var(--line);
-      background:#f7f7f7 center/cover no-repeat;
-      border-radius:6px;
-      overflow:hidden;
-    }
-    .feature img{width:100%; height:100%; object-fit:cover; display:block}
-    /* Gallery */
-    section{padding:56px 0}
-    h2{font-family:"Playfair Display", serif; font-weight:500; font-size:28px; margin:0 0 16px}
-    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
-    .grid img{width:100%; height:360px; object-fit:cover; display:block; border-radius:6px; border:1px solid var(--line)}
-    .grid figure{margin:0}
-    .grid figcaption{font-size:12px; color:var(--muted); margin-top:6px}
-    /* About */
-    .about{display:grid; grid-template-columns:1.1fr .9fr; gap:28px}
-    .lead{font-size:18px}
-    .muted{color:var(--muted)}
-    /* Contact */
-    .contact-card{border:1px solid var(--line); border-radius:6px; padding:18px}
-    footer{border-top:1px solid var(--line); padding:24px 0 48px; color:var(--muted); font-size:14px}
-    @media (max-width: 900px){
-      .grid{grid-template-columns:1fr 1fr}
-      .grid img{height:260px}
-      .about{grid-template-columns:1fr}
-      .feature{height:46vh}
-    }
-    @media (max-width: 640px){
-      .menu{gap:14px; font-size:12px}
-      .grid{grid-template-columns:1fr}
-      .feature{height:40vh}
-    }
-  </style>
+  <title>Romain Baylet — Portfolio</title>
+  <meta name="description" content="Portfolio of Romain Baylet — minimal, timeless, photo‑first.">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">Romain</div>
-      <nav class="menu">
-        <a href="#work">Portfolio</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+
+<header>
+  <div class="container nav">
+    <div class="brand"><a href="index.html">Romain Baylet</a></div>
+    <nav class="menu">
+      <a href="gallery.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
   <main>
     <section class="hero container">
-      <div class="intro">
-        <div class="kicker">Portfolio</div>
-        <h1 class="name">Romain — Selected Works</h1>
-        <p class="muted" style="max-width:60ch">Clean, minimal presentation focused on imagery. Replace the photos and text below to make it yours.</p>
-      </div>
+      <div class="kicker">Portfolio</div>
+      <h1 class="hero-title">Selected Works</h1>
       <div class="feature" aria-label="Featured image">
-        <img src="https://images.unsplash.com/photo-1520975954732-35dd222996f9?q=80&w=2000&auto=format&fit=crop" alt="Hero feature" loading="eager">
+        <img src="https://images.unsplash.com/photo-1520975954732-35dd222996f9?q=80&w=2000&auto=format&fit=crop" alt="Featured">
       </div>
     </section>
 
-    <section id="work" class="container">
-      <h2>Portfolio</h2>
+    <section class="container">
+      <h2>Highlights</h2>
+      <p class="muted">Swap these with your own series or client work.</p>
       <div class="grid">
         <figure>
-          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" alt="Gallery item 1" loading="lazy">
-          <figcaption>Project Title · Short note</figcaption>
+          <a href="gallery.html"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" alt="Set 1"></a>
+          <figcaption>Collection One</figcaption>
         </figure>
         <figure>
-          <img src="https://images.unsplash.com/photo-1487147264018-f937fba0c817?q=80&w=1600&auto=format&fit=crop" alt="Gallery item 2" loading="lazy">
-          <figcaption>Project Title · Short note</figcaption>
+          <a href="gallery.html"><img src="https://images.unsplash.com/photo-1487147264018-f937fba0c817?q=80&w=1600&auto=format&fit=crop" alt="Set 2"></a>
+          <figcaption>Editorial</figcaption>
         </figure>
         <figure>
-          <img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fc4?q=80&w=1600&auto=format&fit=crop" alt="Gallery item 3" loading="lazy">
-          <figcaption>Project Title · Short note</figcaption>
+          <a href="gallery.html"><img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fc4?q=80&w=1600&auto=format&fit=crop" alt="Set 3"></a>
+          <figcaption>Travel & Stories</figcaption>
         </figure>
-        <figure>
-          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop" alt="Gallery item 4" loading="lazy">
-          <figcaption>Project Title · Short note</figcaption>
-        </figure>
-        <figure>
-          <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1600&auto=format&fit=crop" alt="Gallery item 5" loading="lazy">
-          <figcaption>Project Title · Short note</figcaption>
-        </figure>
-        <figure>
-          <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=1600&auto=format&fit=crop" alt="Gallery item 6" loading="lazy">
-          <figcaption>Project Title · Short note</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section id="about" class="container">
-      <h2>About</h2>
-      <div class="about">
-        <div>
-          <p class="lead">I value simplicity, balance, and timeless style. My work focuses on clean compositions and natural light.</p>
-          <p class="muted">Replace this copy with your story — who you are, what you create, and the type of clients or opportunities you’re open to.</p>
-        </div>
-        <div>
-          <p><strong>Based in:</strong> Saigon, Vietnam</p>
-          <p><strong>Available for:</strong> Commissions & collaborations</p>
-          <p><strong>Selected skills:</strong> Art direction, photography, visual storytelling</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="container">
-      <h2>Contact</h2>
-      <div class="contact-card">
-        <p>For inquiries, email <a href="mailto:romainbaylet@icloud.com">romainbaylet@icloud.com</a>.</p>
-        <p class="muted">Add your links:
-          <a href="#" aria-label="Instagram">Instagram</a> ·
-          <a href="#" aria-label="LinkedIn">LinkedIn</a> ·
-          <a href="#" aria-label="GitHub">GitHub</a>
-        </p>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>© <span id="year"></span> Romain. All rights reserved.</p>
-    </div>
-  </footer>
+<footer>
+  <div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div>
+</footer>
+<script src="script.js"></script>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id=a.getAttribute('href').slice(1);
-        const el=document.getElementById(id);
-        if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth', block:'start'})}
-      })
-    });
-  </script>
 </body>
 </html>
