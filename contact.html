@@ -29,12 +29,43 @@
 </header>
 
 <main style="display:flex; flex-direction:column; align-items:center; justify-content:flex-start; min-height:70vh; text-align:center; padding:64px 20px 40px;">
-  <p style="max-width:620px; line-height:1.85; color:#555; font-size:15px; margin:0;">
-    We’re thrilled to learn about your event! Please email us. As every event is distinct, please provide as many details as possible about your vision.
+
+  <!-- Intro paragraph -->
+  <p style="max-width:620px; line-height:1.85; color:#555; font-size:15px; margin:0 0 28px 0;">
+    We’re thrilled to learn about your event! As every event is distinct, please provide as many details as possible about your vision.
     We’ll create a customized photography proposal tailored to your specific needs and expectations. We respond to all inquiries within 48 hours.
-    If you don’t hear back, please check your spam folder to ensure our response reaches you.
+    If you don’t hear back, please check your spam folder.
   </p>
 
+  <!-- Contact form (Formspree) -->
+  <form id="contact-form" class="contact-form" action="https://formspree.io/f/xnngypay" method="POST" novalidate>
+    <input type="hidden" name="_subject" value="New inquiry from romainbaylet.com">
+
+    <div class="field">
+      <label for="name">Name *</label>
+      <input class="input" id="name" name="name" type="text" required>
+    </div>
+
+    <div class="field">
+      <label for="email">Email address *</label>
+      <input class="input" id="email" name="email" type="email" required>
+    </div>
+
+    <div class="field">
+      <label for="message">Message *</label>
+      <textarea class="textarea" id="message" name="message" required></textarea>
+    </div>
+
+    <!-- honeypot (anti-bot) -->
+    <input type="text" name="_gotcha" style="display:none">
+
+    <button class="btn" type="submit">Send message</button>
+
+    <!-- inline status area -->
+    <div class="form-status" aria-live="polite" role="status"></div>
+  </form>
+
+  <!-- Icons row -->
   <div style="margin-top:28px; display:flex; justify-content:center; gap:30px; font-size:26px;">
     <a href="mailto:romainbaylet@icloud.com" aria-label="Email" title="Email" style="color:#111;">
       <i class="fa-solid fa-envelope"></i>
@@ -49,6 +80,6 @@
   <div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div>
 </footer>
 <script src="script.js"></script>
-<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear()</script>
 </body>
 </html>
