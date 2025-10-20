@@ -60,3 +60,35 @@ footer{border-top:1px solid var(--line); padding:28px 0 56px; color:var(--muted)
   .grid{grid-template-columns:1fr}
   .feature{height:42vh}
 }
+/* Center the brand in the header while keeping the menu on the right */
+header .nav {
+  position: relative;
+  justify-content: center;
+}
+header .brand {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+}
+header .menu {
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header .nav { 
+  min-height: 56px; /* keeps the bar tall enough since the menu is absolute */
+}
+@media (max-width: 640px){
+  header .nav{
+    flex-direction: column;         /* stack brand and menu */
+    gap: 8px;
+  }
+  header .menu{
+    position: static;               /* stop absolute on small screens */
+    transform: none;
+    right: auto;
+    top: auto;
+    justify-content: center;        /* center the menu under the name */
+  }
+}
+
