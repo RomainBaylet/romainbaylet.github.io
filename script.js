@@ -1,43 +1,53 @@
-// Smooth scroll for same-page links (optional)
+// ========= Smooth scroll for same-page anchors (optional) =========
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const id = a.getAttribute('href').slice(1);
     const el = document.getElementById(id);
-    if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    if (el) {
+      e.preventDefault();
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   });
 });
 
-// Hamburger toggle
-const btn = document.querySelector('.hamburger');
-const panel = document.querySelector('#menu-panel');
+// ========= Hamburger menu (robust) =========
+(function () {
+  const btn = document.querySelector('.hamburger');
+  const panel = document.querySelector('#menu-panel');
 
-if (btn && panel) {
+  if (!btn || !panel) return; // header might differ on some pages
+
+  const closeMenu = () => {
+    panel.classList.remove('show');
+    btn.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  };
+
+  const openMenu = () => {
+    panel.classList.add('show');
+    btn.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('menu-open');
+  };
+
   btn.addEventListener('click', () => {
-    const open = panel.classList.toggle('show');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    const isOpen = panel.classList.contains('show');
+    isOpen ? closeMenu() : openMenu();
   });
 
-  // Close when clicking a link
+  // close when clicking a link inside panel
   panel.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      panel.classList.remove('show');
-      btn.setAttribute('aria-expanded', 'false');
-    });
+    a.addEventListener('click', closeMenu);
   });
 
-  // Close on outside click
+  // close on outside click
   document.addEventListener('click', (e) => {
     if (!panel.contains(e.target) && !btn.contains(e.target)) {
-      panel.classList.remove('show');
-      btn.setAttribute('aria-expanded', 'false');
+      closeMenu();
     }
   });
 
-  // Close on ESC
+  // close on ESC
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      panel.classList.remove('show');
-      btn.setAttribute('aria-expanded', 'false');
-    }
+    if (e.key === 'Escape') closeMenu();
   });
-}
+})();
