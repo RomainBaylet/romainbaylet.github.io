@@ -2,16 +2,14 @@
 <html lang="en">
 <head>
   <title>Romain Baylet — Portfolio</title>
-  <meta name="description" content="Portfolio of Romain Baylet — minimal, timeless, photo‑first.">
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#ffffff">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-
+  <meta name="description" content="Portfolio of Romain Baylet — minimal, timeless, photo-first.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -19,7 +17,6 @@
   <div class="container nav">
     <div class="brand"><a href="index.html">Romain Baylet</a></div>
 
-    <!-- paste the new block here -->
     <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="menu-panel">
       <span></span><span></span><span></span>
     </button>
@@ -31,40 +28,39 @@
   </div>
 </header>
 
-  <main>
-    <section class="hero container">
-      <div class="kicker">Portfolio</div>
-      <h1 class="hero-title">Selected Works</h1>
-      <div class="feature" aria-label="Featured image">
-        <img src="https://images.unsplash.com/photo-1520975954732-35dd222996f9?q=80&w=2000&auto=format&fit=crop" alt="Featured">
-      </div>
-    </section>
+<main>
+  <section class="hero container">
+    <div class="kicker">Portfolio</div>
+    <h1 class="hero-title">Selected Works</h1>
+    <div class="feature" aria-label="Featured image">
+      <img src="https://images.unsplash.com/photo-1520975954732-35dd222996f9?q=80&w=2000&auto=format&fit=crop" alt="Featured">
+    </div>
+  </section>
 
-    <section class="container">
-      <h2>Highlights</h2>
-      <p class="muted">Swap these with your own series or client work.</p>
-      <div class="grid">
-        <figure>
-          <a href="gallery.html"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" alt="Set 1"></a>
-          <figcaption>Collection One</figcaption>
-        </figure>
-        <figure>
-          <a href="gallery.html"><img src="https://images.unsplash.com/photo-1487147264018-f937fba0c817?q=80&w=1600&auto=format&fit=crop" alt="Set 2"></a>
-          <figcaption>Editorial</figcaption>
-        </figure>
-        <figure>
-          <a href="gallery.html"><img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fc4?q=80&w=1600&auto=format&fit=crop" alt="Set 3"></a>
-          <figcaption>Travel & Stories</figcaption>
-        </figure>
-      </div>
-    </section>
-  </main>
+  <section class="container">
+    <h2>Highlights</h2>
+    <p class="muted">Swap these with your own series or client work.</p>
+    <div class="grid">
+      <figure>
+        <a href="gallery.html"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" alt="Set 1"></a>
+        <figcaption>Collection One</figcaption>
+      </figure>
+      <figure>
+        <a href="gallery.html"><img src="https://images.unsplash.com/photo-1487147264018-f937fba0c817?q=80&w=1600&auto=format&fit=crop" alt="Set 2"></a>
+        <figcaption>Editorial</figcaption>
+      </figure>
+      <figure>
+        <a href="gallery.html"><img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fc4?q=80&w=1600&auto=format&fit=crop" alt="Set 3"></a>
+        <figcaption>Travel & Stories</figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
 
 <footer>
   <div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div>
 </footer>
 <script src="script.js"></script>
 <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
-
 </body>
 </html>
