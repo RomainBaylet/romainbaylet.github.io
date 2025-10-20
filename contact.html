@@ -4,46 +4,57 @@
   <title>Contact — Romain Baylet</title>
   <meta name="description" content="Contact Romain Baylet.">
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#ffffff">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<header>
-  <div class="container nav">
-    <div class="brand"><a href="index.html">Romain Baylet</a></div>
-    <nav class="menu">
-      <a href="gallery.html">Portfolio</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+  <!-- Header (stays as-is) -->
+  <header>
+    <div class="container nav">
+      <div class="brand"><a href="index.html">Romain Baylet</a></div>
+      <nav class="menu">
+        <a href="gallery.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <div class="card" style="text-align:center; font-size:28px;">
-  <a href="mailto:romainbaylet@icloud.com" aria-label="Email" title="Email" style="margin:0 12px;">
-    <i class="fa-solid fa-envelope"></i>
-  </a>
-  <a href="https://instagram.com/romain_baylet" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="margin:0 12px;">
-    <i class="fa-brands fa-instagram"></i>
-  </a>
-</div>
+  <!-- CONTACT CONTENT (centered block) -->
+  <main style="display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:80vh; text-align:center; padding:40px 20px;">
+    <h1 style="font-family:'Playfair Display',serif; font-weight:500; font-size:34px; margin-bottom:24px;">
+      Romain Baylet
+    </h1>
 
-    </section>
+    <p style="max-width:620px; line-height:1.85; color:#555; font-size:15px; margin:0;">
+      We’re thrilled to learn about your event! Please email us. As every event is distinct, please provide as many details as possible about your vision.
+      We’ll create a customized photography proposal tailored to your specific needs and expectations. We respond to all inquiries within 48 hours.
+      If you don’t hear back, please check your spam folder to ensure our response reaches you.
+    </p>
+
+    <div style="margin-top:30px; display:flex; justify-content:center; gap:30px; font-size:26px;">
+      <a href="mailto:romainbaylet@icloud.com" aria-label="Email" title="Email" style="color:#111;">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+      <a href="https://www.instagram.com/romain_baylet" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="color:#111;">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
   </main>
 
-<footer>
-  <div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div>
-</footer>
-<script src="script.js"></script>
-<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+  <!-- Footer -->
+  <footer>
+    <div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div>
+  </footer>
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 
 </body>
 </html>
