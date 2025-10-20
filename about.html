@@ -18,11 +18,16 @@
 <header>
   <div class="container nav">
     <div class="brand"><a href="index.html">Romain Baylet</a></div>
-    <nav class="menu">
-      <a href="gallery.html">Portfolio</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+
+    <!-- paste the new block here -->
+    <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="menu-panel">
+      <span></span><span></span><span></span>
+    </button>
+    <div id="menu-panel" class="menu-panel" role="menu">
+      <a href="gallery.html" role="menuitem">Portfolio</a>
+      <a href="about.html" role="menuitem">About</a>
+      <a href="contact.html" role="menuitem">Contact</a>
+    </div>
   </div>
 </header>
 
