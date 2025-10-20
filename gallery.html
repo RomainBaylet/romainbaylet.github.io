@@ -3,23 +3,19 @@
 <head>
   <title>Portfolio — Romain Baylet</title>
   <meta name="description" content="Selected galleries by Romain Baylet.">
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#ffffff">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
   <div class="container nav">
     <div class="brand"><a href="index.html">Romain Baylet</a></div>
-
-    <!-- paste the new block here -->
     <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="menu-panel">
       <span></span><span></span><span></span>
     </button>
@@ -31,26 +27,25 @@
   </div>
 </header>
 
-  <main class="container">
-    <section>
-      <h1 class="hero-title" style="text-align:left">Portfolio</h1>
-      <p class="muted">Replace these placeholders with your own images under <code>assets/</code> and update the <code>src</code> paths.</p>
-      <div class="grid">
-        <figure><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop" alt=""><figcaption>Series A</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1600&auto=format&fit=crop" alt=""><figcaption>Series B</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=1600&auto=format&fit=crop" alt=""><figcaption>Series C</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1600&auto=format&fit=crop" alt=""><figcaption>Portraits</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1551024709-8f23befc6cf7?q=80&w=1600&auto=format&fit=crop" alt=""><figcaption>Weddings</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1600&auto=format&fit=crop" alt=""><figcaption>Details</figcaption></figure>
-      </div>
-    </section>
-  </main>
+<main class="container">
+  <section>
+    <h1 class="hero-title" style="text-align:left">Portfolio</h1>
+    <p class="muted">Replace these placeholders with your own images under <code>assets/</code> and update the <code>src</code> paths.</p>
+    <div class="grid">
+      <figure><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop" alt=""><figcaption>Series A</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1600&auto=format&fit=crop" alt=""><figcaption>Series B</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=1600&auto=format&fit=crop" alt=""><figcaption>Series C</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1600&auto=format&fit=crop" alt=""><figcaption>Portraits</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1551024709-8f23befc6cf7?q=80&w=1600&auto=format&fit=crop" alt=""><figcaption>Weddings</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1600&auto=format&fit=crop" alt=""><figcaption>Details</figcaption></figure>
+    </div>
+  </section>
+</main>
 
 <footer>
   <div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div>
 </footer>
 <script src="script.js"></script>
 <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
-
 </body>
 </html>
