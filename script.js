@@ -1,4 +1,4 @@
-// ========= Smooth scroll for same-page anchors (optional) =========
+// ========= Smooth scroll for same-page anchors =========
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const id = a.getAttribute('href').slice(1);
@@ -67,8 +67,11 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
       if (res.ok) {
         form.reset();
         showStatus("Thanks! Your message has been sent. I’ll get back to you within 48 hours.");
-        // Optional: make the form fade a bit after success
-        form.style.opacity = '0.8';
+
+        // 🔥 Optional visual feedback: fade form out smoothly
+        form.style.transition = "opacity 0.8s ease";
+        form.style.opacity = "0.5";
+
       } else {
         showStatus("Hmm, something went wrong. Please try again or email me directly.", false);
       }
