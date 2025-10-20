@@ -15,15 +15,16 @@
 </head>
 <body>
 
-  <!-- Header (stays as-is) -->
- <header>
+<header>
   <div class="container nav">
     <div class="brand"><a href="index.html">Romain Baylet</a></div>
 
-    <!-- paste the new block here -->
+    <!-- Hamburger -->
     <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="menu-panel">
       <span></span><span></span><span></span>
     </button>
+
+    <!-- Dropdown -->
     <div id="menu-panel" class="menu-panel" role="menu">
       <a href="gallery.html" role="menuitem">Portfolio</a>
       <a href="about.html" role="menuitem">About</a>
@@ -32,31 +33,28 @@
   </div>
 </header>
 
-  <!-- CONTACT CONTENT (centered block) -->
-<main style="display:flex; flex-direction:column; align-items:center; justify-content:flex-start; min-height:70vh; text-align:center; padding:80px 20px 40px;">
+<main style="display:flex; flex-direction:column; align-items:center; justify-content:flex-start; min-height:70vh; text-align:center; padding:64px 20px 40px;">
+  <p style="max-width:620px; line-height:1.85; color:#555; font-size:15px; margin:0;">
+    We’re thrilled to learn about your event! Please email us. As every event is distinct, please provide as many details as possible about your vision.
+    We’ll create a customized photography proposal tailored to your specific needs and expectations. We respond to all inquiries within 48 hours.
+    If you don’t hear back, please check your spam folder to ensure our response reaches you.
+  </p>
 
-    <p style="max-width:620px; line-height:1.85; color:#555; font-size:15px; margin:0;">
-      We’re thrilled to learn about your event! Please email us. As every event is distinct, please provide as many details as possible about your vision.
-      We’ll create a customized photography proposal tailored to your specific needs and expectations. We respond to all inquiries within 48 hours.
-      If you don’t hear back, please check your spam folder to ensure our response reaches you.
-    </p>
+  <div style="margin-top:28px; display:flex; justify-content:center; gap:30px; font-size:26px;">
+    <a href="mailto:romainbaylet@icloud.com" aria-label="Email" title="Email" style="color:#111;">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+    <a href="https://www.instagram.com/romain_baylet" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="color:#111;">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+  </div>
+</main>
 
-    <div style="margin-top:30px; display:flex; justify-content:center; gap:30px; font-size:26px;">
-      <a href="mailto:romainbaylet@icloud.com" aria-label="Email" title="Email" style="color:#111;">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
-      <a href="https://www.instagram.com/romain_baylet" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="color:#111;">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div>
-  </footer>
-  <script src="script.js"></script>
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<footer>
+  <div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div>
+</footer>
+<script src="script.js"></script>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 
 </body>
 </html>
