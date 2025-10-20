@@ -4,6 +4,7 @@
   --text: #111111;
   --muted: #666666;
   --line: #eaeaea;
+  --accent: #000000; /* subtle underline color */
   --max: 1120px;
 }
 
@@ -140,7 +141,7 @@ footer {
   text-align: center;
 }
 
-/* ===== Contact form styles (centered, elegant) ===== */
+/* ===== Contact form styles (centered, elegant, glowing) ===== */
 .contact-form {
   display: grid;
   gap: 22px;
@@ -156,7 +157,7 @@ footer {
   max-width: 480px;
   display: flex;
   flex-direction: column;
-  align-items: center;   /* centers label and input */
+  align-items: center;
   gap: 8px;
 }
 
@@ -175,9 +176,17 @@ footer {
   outline: none;
   font: inherit;
   background: white;
-  text-align: center;    /* centers text cursor + placeholder */
+  text-align: center;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-.input:focus, .textarea:focus { border-bottom-color: #111; }
+
+/* ✨ Luxury fade-in glow on focus */
+.input:focus, .textarea:focus {
+  border-bottom-color: var(--accent);
+  box-shadow: 0 4px 8px -6px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
 .textarea { min-height: 120px; resize: vertical; }
 
 .btn {
@@ -193,8 +202,14 @@ footer {
   cursor: pointer;
   justify-self: center;
   margin-top: 10px;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
-.btn:hover { filter: brightness(0.96); }
+
+/* smooth hover for the button */
+.btn:hover {
+  background: #222;
+  transform: translateY(-1px);
+}
 
 .form-status {
   margin-top: 6px;
