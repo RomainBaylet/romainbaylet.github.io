@@ -10,6 +10,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Ensure proper side-by-side layout for About section */
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .split {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .split img {
+        margin: 0 auto 24px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -28,16 +47,17 @@
 </header>
 
 <main class="container">
-  <section class="split reveal" style="padding-top:48px; align-items:center; --d:.05s">
+  <section class="split reveal" style="padding-top:64px; --d:.05s">
     <div>
-      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1000&auto=format&fit=crop" 
-           alt="Portrait of Romain Baylet" 
-           style="border:1px solid var(--line); border-radius:6px; width:100%; max-width:420px; height:auto; object-fit:cover; margin:auto;">
+      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1000&auto=format&fit=crop"
+           alt="Portrait of Romain Baylet"
+           style="border:1px solid var(--line); border-radius:6px; width:100%; max-width:420px; height:auto; object-fit:cover;">
     </div>
+
     <div style="max-width:540px;">
-      <h1 class="hero-title" style="text-align:left; margin-bottom:12px;">About</h1>
+      <h1 class="hero-title" style="text-align:left; margin-bottom:16px;">About</h1>
       <p class="lead" style="font-size:17px; line-height:1.85; color:#444;">
-        A quiet dialogue between light, time, and emotion. I seek only to capture honesty in simplicity, the poetry of what’s real.
+        A quiet dialogue between light, time, and emotion. I seek only to capture honesty in simplicity — the poetry of what’s real.
         I’m drawn to imperfection, to fleeting glances, to moments that seem to breathe even in stillness. My work remains minimal
         because meaning needs space. Every image I create is an invitation to pause, to feel something true, even when it can’t be explained.
       </p>
@@ -48,9 +68,11 @@
 <footer>
   <div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div>
 </footer>
+
 <script src="script.js"></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
