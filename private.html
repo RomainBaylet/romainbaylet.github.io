@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Private Collection — Romain Baylet</title>
+  <meta name="description" content="Selected photographs available as limited prints.">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .print-card { display:flex; flex-direction:column; gap:10px; }
+    .buy { 
+      display:inline-block; border:1px solid #111; background:#111; color:#fff; 
+      padding:8px 14px; font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+      text-align:center; transition:background .25s ease, transform .2s ease;
+    }
+    .buy:hover { background:#222; transform: translateY(-1px); }
+    .caption { font-size:12px; color:#666; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand"><a href="index.html">Romain Baylet</a></div>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="menu-panel">
+      <span></span><span></span><span></span>
+    </button>
+    <div id="menu-panel" class="menu-panel" role="menu">
+      <a href="gallery.html" role="menuitem">Portfolio</a>
+      <a href="about.html" role="menuitem">About</a>
+      <a href="contact.html" role="menuitem">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="reveal" style="--d:.2s">
+    <a href="gallery.html" class="muted" style="font-size:13px;">← Back to Portfolio</a>
+    <h1 class="hero-title" style="text-align:left; margin:8px 0 12px;">Private Collection</h1>
+    <p class="muted" style="margin-bottom:22px">Limited, archival prints.</p>
+
+    <div class="grid">
+      <figure class="reveal print-card" style="--d:.3s">
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=1600&auto=format&fit=crop" alt="Print 1">
+        <figcaption class="caption">“No. 01 — Dusk Study” · 40×60 / 60×90 · Edition of 25</figcaption>
+        <a class="buy" href="contact.html?subject=Private%20Collection%20—%20No.%2001">Inquire to purchase</a>
+      </figure>
+      <figure class="reveal print-card" style="--d:.35s">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1600&auto=format&fit=crop" alt="Print 2">
+        <figcaption class="caption">“No. 02 — Quiet Field” · 40×60 / 60×90 · Edition of 25</figcaption>
+        <a class="buy" href="contact.html?subject=Private%20Collection%20—%20No.%2002">Inquire to purchase</a>
+      </figure>
+      <figure class="reveal print-card" style="--d:.4s">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop" alt="Print 3">
+        <figcaption class="caption">“No. 03 — Shoreline” · 40×60 / 60×90 · Edition of 25</figcaption>
+        <a class="buy" href="contact.html?subject=Private%20Collection%20—%20No.%2003">Inquire to purchase</a>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer><div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div></footer>
+<script src="script.js"></script>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
