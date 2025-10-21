@@ -29,30 +29,36 @@
 </header>
 
 <main>
-  <!-- Slower fade-in (0.05s delay, 1.4s duration handled in CSS) -->
-  <section class="hero container reveal" style="--d:.05s">
-    <div class="kicker">Portfolio</div>
-    <h1 class="hero-title">Selected Works</h1>
-    <div class="feature" aria-label="Featured image">
-      <img src="https://images.unsplash.com/photo-1520975954732-35dd222996f9?q=80&w=2000&auto=format&fit=crop" alt="Featured">
+  <!-- Hero: staggered, slow cinematic entrance -->
+  <section class="hero container">
+    <div class="kicker reveal" style="--d: .20s">Portfolio</div>
+    <h1 class="hero-title reveal" style="--d: .45s">Selected Works</h1>
+    <div class="feature reveal" style="--d: .70s" aria-label="Featured image">
+      <img src="https://images.unsplash.com/photo-1520975954732-35dd222996f9?q=80&w=2000&auto=format&fit=crop" alt="Featured" loading="eager" decoding="async">
     </div>
   </section>
 
-  <!-- Slightly longer delay for layered entrance -->
-  <section class="container reveal" style="--d:.25s">
+  <!-- Highlights: section + items cascade in -->
+  <section class="container reveal" style="--d:.95s">
     <h2>Highlights</h2>
     <p class="muted">Swap these with your own series or client work.</p>
     <div class="grid">
-      <figure class="reveal" style="--d:.35s">
-        <a href="gallery.html"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" alt="Set 1"></a>
+      <figure class="reveal" style="--d:1.05s">
+        <a href="gallery.html">
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" alt="Collection One" loading="lazy" decoding="async">
+        </a>
         <figcaption>Collection One</figcaption>
       </figure>
-      <figure class="reveal" style="--d:.45s">
-        <a href="gallery.html"><img src="https://images.unsplash.com/photo-1487147264018-f937fba0c817?q=80&w=1600&auto=format&fit=crop" alt="Set 2"></a>
+      <figure class="reveal" style="--d:1.15s">
+        <a href="gallery.html">
+          <img src="https://images.unsplash.com/photo-1487147264018-f937fba0c817?q=80&w=1600&auto=format&fit=crop" alt="Editorial" loading="lazy" decoding="async">
+        </a>
         <figcaption>Editorial</figcaption>
       </figure>
-      <figure class="reveal" style="--d:.55s">
-        <a href="gallery.html"><img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fc4?q=80&w=1600&auto=format&fit=crop" alt="Set 3"></a>
+      <figure class="reveal" style="--d:1.25s">
+        <a href="gallery.html">
+          <img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fc4?q=80&w=1600&auto=format&fit=crop" alt="Travel & Stories" loading="lazy" decoding="async">
+        </a>
         <figcaption>Travel & Stories</figcaption>
       </figure>
     </div>
