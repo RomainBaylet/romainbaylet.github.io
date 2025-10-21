@@ -29,6 +29,7 @@
 </header>
 
 <main>
+  <!-- Slower fade-in (0.05s delay, 1.4s duration handled in CSS) -->
   <section class="hero container reveal" style="--d:.05s">
     <div class="kicker">Portfolio</div>
     <h1 class="hero-title">Selected Works</h1>
@@ -37,19 +38,20 @@
     </div>
   </section>
 
-  <section class="container reveal" style="--d:.15s">
+  <!-- Slightly longer delay for layered entrance -->
+  <section class="container reveal" style="--d:.25s">
     <h2>Highlights</h2>
     <p class="muted">Swap these with your own series or client work.</p>
     <div class="grid">
-      <figure>
+      <figure class="reveal" style="--d:.35s">
         <a href="gallery.html"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" alt="Set 1"></a>
         <figcaption>Collection One</figcaption>
       </figure>
-      <figure>
+      <figure class="reveal" style="--d:.45s">
         <a href="gallery.html"><img src="https://images.unsplash.com/photo-1487147264018-f937fba0c817?q=80&w=1600&auto=format&fit=crop" alt="Set 2"></a>
         <figcaption>Editorial</figcaption>
       </figure>
-      <figure>
+      <figure class="reveal" style="--d:.55s">
         <a href="gallery.html"><img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fc4?q=80&w=1600&auto=format&fit=crop" alt="Set 3"></a>
         <figcaption>Travel & Stories</figcaption>
       </figure>
@@ -60,7 +62,11 @@
 <footer>
   <div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div>
 </footer>
+
 <script src="script.js"></script>
-<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
