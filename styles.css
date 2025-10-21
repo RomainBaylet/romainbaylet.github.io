@@ -238,3 +238,19 @@ footer {
   opacity: 1;
   transform: none;
 }
+
+/* === Hero intro fade (slow & cinematic) === */
+.hero-title,
+.kicker,
+.feature {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.3s ease-out, transform 1.3s ease-out;
+}
+
+.hero-title.show,
+.kicker.show,
+.feature.show {
+  opacity: 1;
+  transform: none;
+}
