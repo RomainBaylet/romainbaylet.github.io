@@ -226,3 +226,15 @@ footer {
   .contact-form { width: 90%; }
   .field { max-width: 100%; }
 }
+/* === Soft reveal animation (load + scroll) === */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .6s ease, transform .6s ease;
+  transition-delay: var(--d, 0s); /* allow per-block delay */
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: none;
+}
