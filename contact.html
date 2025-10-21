@@ -29,16 +29,14 @@
 </header>
 
 <main style="display:flex; flex-direction:column; align-items:center; justify-content:flex-start; min-height:70vh; text-align:center; padding:64px 20px 40px;">
-
-  <!-- Intro paragraph -->
-  <p style="max-width:620px; line-height:1.85; color:#555; font-size:15px; margin:0 0 28px 0;">
+  <p class="reveal" style="--d:.05s; max-width:620px; line-height:1.85; color:#555; font-size:15px; margin:0 0 28px 0;">
     We’re thrilled to learn about your event! As every event is distinct, please provide as many details as possible about your vision.
     We’ll create a customized photography proposal tailored to your specific needs and expectations. We respond to all inquiries within 48 hours.
     If you don’t hear back, please check your spam folder.
   </p>
 
   <!-- Contact form (Formspree) -->
-  <form id="contact-form" class="contact-form" action="https://formspree.io/f/xnngypay" method="POST" novalidate>
+  <form id="contact-form" class="contact-form reveal" style="--d:.15s" action="https://formspree.io/f/xnngypay" method="POST" novalidate>
     <input type="hidden" name="_subject" value="New inquiry from romainbaylet.com">
 
     <div class="field">
@@ -66,7 +64,7 @@
   </form>
 
   <!-- Icons row -->
-  <div style="margin-top:28px; display:flex; justify-content:center; gap:30px; font-size:26px;">
+  <div class="reveal" style="--d:.25s; margin-top:28px; display:flex; justify-content:center; gap:30px; font-size:26px;">
     <a href="mailto:romainbaylet@icloud.com" aria-label="Email" title="Email" style="color:#111;">
       <i class="fa-solid fa-envelope"></i>
     </a>
