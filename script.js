@@ -96,3 +96,21 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
   els.forEach(el => obs.observe(el));
 })();
+// === Smooth page fade-in/out ===
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("fade-in");
+
+  // Fade out before navigating away
+  document.querySelectorAll('a[href]').forEach(link => {
+    const url = new URL(link.href, window.location.href);
+    const isSameHost = url.host === window.location.host;
+
+    if (isSameHost && !url.hash && !url.href.includes('mailto:')) {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.body.style.opacity = '0';
+        setTimeout(() => { window.location = link.href; }, 700); // half the fade time
+      });
+    }
+  });
+});
