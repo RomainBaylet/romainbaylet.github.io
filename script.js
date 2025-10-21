@@ -80,3 +80,19 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
   });
 })();
+// ========= Reveal on load/scroll (luxury fade) =========
+(function () {
+  const els = document.querySelectorAll('.reveal');
+  if (!els.length) return;
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('show');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  els.forEach(el => obs.observe(el));
+})();
