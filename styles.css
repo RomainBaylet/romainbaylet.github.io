@@ -1,10 +1,10 @@
-/* styles.css — clean, minimal, photo-first */
+/* styles.css — minimal, timeless, photo-first aesthetic */
 :root {
-  --bg: #ffffff;
+  --bg: #fdfcf9; /* ✨ Elegant warm white */
   --text: #111111;
   --muted: #666666;
   --line: #eaeaea;
-  --accent: #000000; /* subtle underline color */
+  --accent: #000000;
   --max: 1120px;
 }
 
@@ -19,7 +19,10 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   line-height: 1.7;
+  opacity: 0;
+  transition: opacity 1.5s ease; /* smooth fade-in on load */
 }
+body.fade-in { opacity: 1; }
 
 /* Basics */
 img { max-width: 100%; display: block; }
@@ -50,7 +53,7 @@ header {
   letter-spacing: .4px;
 }
 
-/* === Hamburger menu === */
+/* Hamburger menu */
 .hamburger {
   position: absolute;
   right: 28px;
@@ -80,9 +83,7 @@ header {
 .hamburger[aria-expanded="true"] span:nth-child(1) {
   transform: rotate(45deg) translate(4px, 4px);
 }
-.hamburger[aria-expanded="true"] span:nth-child(2) {
-  opacity: 0;
-}
+.hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .hamburger[aria-expanded="true"] span:nth-child(3) {
   transform: rotate(-45deg) translate(4px, -4px);
 }
@@ -132,134 +133,6 @@ h2 {
 .lead { font-size: 18px; }
 .muted { color: var(--muted); }
 
-/* Footer */
-footer {
-  border-top: 1px solid var(--line);
-  padding: 28px 0 56px;
-  color: var(--muted);
-  font-size: 14px;
-  text-align: center;
-}
-
-/* ===== Contact form styles (centered, elegant, glowing) ===== */
-.contact-form {
-  display: grid;
-  gap: 22px;
-  width: 100%;
-  max-width: 620px;
-  margin: 32px auto 0;
-  justify-items: center;
-  text-align: center;
-}
-
-.field {
-  width: 100%;
-  max-width: 480px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-
-.field label {
-  font-size: 12px;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.input, .textarea {
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid var(--line);
-  padding: 12px 0;
-  outline: none;
-  font: inherit;
-  background: white;
-  text-align: center;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* ✨ Luxury fade-in glow on focus */
-.input:focus, .textarea:focus {
-  border-bottom-color: var(--accent);
-  box-shadow: 0 4px 8px -6px rgba(0,0,0,0.15);
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.textarea { min-height: 120px; resize: vertical; }
-
-.btn {
-  appearance: none;
-  border: 1px solid #111;
-  background: #111;
-  color: #fff;
-  padding: 10px 18px;
-  border-radius: 0;
-  font-size: 12px;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  cursor: pointer;
-  justify-self: center;
-  margin-top: 10px;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-.btn:hover {
-  background: #222;
-  transform: translateY(-1px);
-}
-
-.form-status {
-  margin-top: 6px;
-  font-size: 14px;
-  min-height: 20px;
-  color: #555;
-  text-align: center;
-}
-.form-status.success { color: #1a7f37; }
-.form-status.error   { color: #b42318; }
-
-/* Responsive */
-@media (max-width: 640px) {
-  .contact-form { width: 90%; }
-  .field { max-width: 100%; }
-}
-
-/* === Soft reveal animation (slower & smoother) === */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.4s cubic-bezier(.25,.1,.25,1),
-              transform 1.4s cubic-bezier(.25,.1,.25,1);
-  transition-delay: var(--d, 0s); /* per-block delay */
-}
-.reveal.show {
-  opacity: 1;
-  transform: none;
-}
-
-/* === Hero intro fade (slow & cinematic) === */
-.hero-title,
-.kicker,
-.feature {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.3s cubic-bezier(.25,.1,.25,1),
-              transform 1.3s cubic-bezier(.25,.1,.25,1);
-}
-.hero-title.show,
-.kicker.show,
-.feature.show {
-  opacity: 1;
-  transform: none;
-}
-
-/* === Page fade transition (luxury smooth) === */
-body { opacity: 0; transition: opacity 1.5s cubic-bezier(.25,.1,.25,1); }
-body.fade-in { opacity: 1; }
-
-/* Respect users who prefer reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; }
-  body { opacity: 1 !important; }
-}
+/* Grid */
+.grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.grid i
