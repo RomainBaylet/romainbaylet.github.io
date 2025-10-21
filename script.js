@@ -68,7 +68,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
         form.reset();
         showStatus("Thanks! Your message has been sent. I’ll get back to you within 48 hours.");
 
-        // 🔥 Optional visual feedback: fade form out smoothly
+        // Optional visual feedback: fade form out smoothly
         form.style.transition = "opacity 0.8s ease";
         form.style.opacity = "0.5";
 
@@ -80,6 +80,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
   });
 })();
+
 // ========= Reveal on load/scroll (luxury fade) =========
 (function () {
   const els = document.querySelectorAll('.reveal');
@@ -96,21 +97,43 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
   els.forEach(el => obs.observe(el));
 })();
-// === Smooth page fade-in/out ===
+
+// === Smooth page fade-in/out (with safeguards) ===
 document.addEventListener("DOMContentLoaded", () => {
+  // fade in on load
   document.body.classList.add("fade-in");
 
-  // Fade out before navigating away
-  document.querySelectorAll('a[href]').forEach(link => {
-    const url = new URL(link.href, window.location.href);
-    const isSameHost = url.host === window.location.host;
-
-    if (isSameHost && !url.hash && !url.href.includes('mailto:')) {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        document.body.style.opacity = '0';
-        setTimeout(() => { window.location = link.href; }, 700); // half the fade time
-      });
+  // ensure visible when restored from bfcache (back/forward)
+  window.addEventListener("pageshow", (e) => {
+    if (e.persisted) {
+      document.body.style.opacity = "1";
+      document.body.classList.add("fade-in");
     }
+  });
+
+  const links = document.querySelectorAll('a[href]');
+  links.forEach(link => {
+    const href = link.getAttribute('href') || '';
+    const url = new URL(href, window.location.href);
+
+    // ignore: hash links, mailto/tel/js, downloads, target=_blank, other hosts
+    const isHash      = href.startsWith('#');
+    const isMailTel   = href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:');
+    const isDownload  = link.hasAttribute('download');
+    const isBlank     = link.target === '_blank';
+    const otherHost   = url.host !== window.location.host;
+
+    if (isHash || isMailTel || isDownload || isBlank || otherHost) return;
+
+    link.addEventListener('click', (e) => {
+      // allow modifier clicks to open new tab/window
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+
+      e.preventDefault();
+      // start fade out
+      document.body.style.opacity = '0';
+      // navigate halfway through the CSS transition (1.5s / 2 = 750ms)
+      setTimeout(() => { window.location = url.href; }, 750);
+    });
   });
 });
