@@ -254,3 +254,12 @@ footer {
   opacity: 1;
   transform: none;
 }
+/* === Page fade transition (luxury smooth) === */
+body {
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+body.fade-in {
+  opacity: 1;
+}
