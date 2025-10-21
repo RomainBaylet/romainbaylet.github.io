@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Elopement — Romain Baylet</title>
+  <meta name="description" content="Elopement photography by Romain Baylet — intimate, timeless, sincere.">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand"><a href="index.html">Romain Baylet</a></div>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="menu-panel">
+      <span></span><span></span><span></span>
+    </button>
+    <div id="menu-panel" class="menu-panel" role="menu">
+      <a href="gallery.html" role="menuitem">Portfolio</a>
+      <a href="about.html" role="menuitem">About</a>
+      <a href="contact.html" role="menuitem">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="reveal" style="--d:.2s">
+    <a href="gallery.html" class="muted" style="font-size:13px;">← Back to Portfolio</a>
+    <h1 class="hero-title" style="text-align:left; margin:8px 0 12px;">Elopement</h1>
+    <p class="muted" style="margin-bottom:22px">Quiet celebrations, honest moments.</p>
+
+    <div class="grid">
+      <!-- Swap with your images -->
+      <figure class="reveal" style="--d:.3s"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop" alt=""></figure>
+      <figure class="reveal" style="--d:.35s"><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1600&auto=format&fit=crop" alt=""></figure>
+      <figure class="reveal" style="--d:.4s"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=1600&auto=format&fit=crop" alt=""></figure>
+      <figure class="reveal" style="--d:.45s"><img src="https://images.unsplash.com/photo-1551024709-8f23befc6cf7?q=80&w=1600&auto=format&fit=crop" alt=""></figure>
+      <figure class="reveal" style="--d:.5s"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" alt=""></figure>
+      <figure class="reveal" style="--d:.55s"><img src="https://images.unsplash.com/photo-1487147264018-f937fba0c817?q=80&w=1600&auto=format&fit=crop" alt=""></figure>
+    </div>
+  </section>
+</main>
+
+<footer><div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div></footer>
+<script src="script.js"></script>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
