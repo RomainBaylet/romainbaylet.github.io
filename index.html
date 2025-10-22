@@ -1,22 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Romain Baylet — Portfolio</title>
-  <meta name="description" content="Portfolio of Romain Baylet — minimal, timeless, photo-first.">
   <meta charset="utf-8">
+  <title>Romain Baylet — Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <header>
   <div class="container nav">
     <div class="brand"><a href="index.html">Romain Baylet</a></div>
-
     <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="menu-panel">
       <span></span><span></span><span></span>
     </button>
@@ -28,39 +21,15 @@
   </div>
 </header>
 
-<main>
-  <!-- Hero: staggered, slow cinematic entrance -->
-  <section class="hero container">
-    <div class="kicker reveal" style="--d: .20s">Portfolio</div>
-    <h1 class="hero-title reveal" style="--d: .45s">Selected Works</h1>
-    <div class="feature reveal" style="--d: .70s" aria-label="Featured image">
-      <img src="https://images.unsplash.com/photo-1520975954732-35dd222996f9?q=80&w=2000&auto=format&fit=crop" alt="Featured" loading="eager" decoding="async">
-    </div>
-  </section>
+<main class="container">
+  <section class="reveal" style="--d:.2s">
+    <h1 class="hero-title" style="text-align:left; margin:8px 0 18px;">Selected Works</h1>
+    <p class="muted" style="margin-bottom:22px;">Highlights of recent series and projects.</p>
 
-  <!-- Highlights: section + items cascade in -->
-  <section class="container reveal" style="--d:.95s">
-    <h2>Highlights</h2>
-    <p class="muted">Swap these with your own series or client work.</p>
     <div class="grid">
-      <figure class="reveal" style="--d:1.05s">
-        <a href="gallery.html">
-          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" alt="Collection One" loading="lazy" decoding="async">
-        </a>
-        <figcaption>Collection One</figcaption>
-      </figure>
-      <figure class="reveal" style="--d:1.15s">
-        <a href="gallery.html">
-          <img src="https://images.unsplash.com/photo-1487147264018-f937fba0c817?q=80&w=1600&auto=format&fit=crop" alt="Editorial" loading="lazy" decoding="async">
-        </a>
-        <figcaption>Editorial</figcaption>
-      </figure>
-      <figure class="reveal" style="--d:1.25s">
-        <a href="gallery.html">
-          <img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fc4?q=80&w=1600&auto=format&fit=crop" alt="Travel & Stories" loading="lazy" decoding="async">
-        </a>
-        <figcaption>Travel & Stories</figcaption>
-      </figure>
+      <a href="portrait.html"><img src="https://images.unsplash.com/photo-1549887534-3db1bd59dcca?q=80&w=800" alt="Portrait"></a>
+      <a href="elopement.html"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=800" alt="Elopement"></a>
+      <a href="private.html"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=800" alt="Private Collection"></a>
     </div>
   </section>
 </main>
@@ -68,11 +37,7 @@
 <footer>
   <div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div>
 </footer>
-
 <script src="script.js"></script>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
