@@ -5,29 +5,6 @@
   <meta name="description" content="Limited, archival fine art prints by Romain Baylet.">
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* page-local layout so other pages stay unchanged */
-    .private-grid{
-      display:grid;
-      grid-template-columns: 1fr;       /* single centered column */
-      justify-items: center;
-      gap: 24px;
-    }
-    .print-card{ display:flex; flex-direction:column; gap:10px; max-width: 760px; width:100%; }
-    .print-card img{
-      width:100%; height:auto;
-      border:1px solid var(--line); border-radius:6px;
-    }
-    .caption{ font-size:12px; color:#666; line-height:1.6; }
-    .edition{ font-size:12px; color:#999; letter-spacing:.08em; margin-top:4px; }
-    .buy{
-      align-self:start;
-      display:inline-block; border:1px solid #111; background:#111; color:#fff;
-      padding:8px 14px; font-size:12px; letter-spacing:.14em; text-transform:uppercase;
-      text-align:center; transition:background .25s ease, transform .2s ease;
-    }
-    .buy:hover{ background:#222; transform: translateY(-1px); }
-  </style>
 </head>
 <body>
 <header>
@@ -44,30 +21,35 @@
   </div>
 </header>
 
-<main class="container">
+<main class="container private-wrap">
   <section class="reveal" style="--d:.2s">
     <a href="gallery.html" class="muted" style="font-size:13px;">← Back to Portfolio</a>
-    <h1 class="hero-title" style="text-align:left; margin:8px 0 12px;">Private Collection</h1>
-    <p class="muted" style="margin-bottom:22px;">Limited edition fine art prints — created, signed, and numbered.</p>
+    <h1 class="hero-title" style="text-align:left; margin:8px 0 8px;">Private Collection</h1>
+    <p class="private-intro">Limited edition fine art prints — created, signed, and numbered by Romain Baylet.</p>
 
     <div class="private-grid">
-      <figure class="reveal print-card" style="--d:.3s">
-        <!-- 👇 CHANGE ONLY THIS FILENAME to match EXACT repo file -->
-        <img src="assets/private/IMG_0207.jpg" alt="Alison — We are nothing but passing shadows">
+      <!-- ALISON -->
+      <figure class="print-card" style="max-width: 760px; width:100%;">
+        <div class="frame has-overlay">
+          <!-- 👇 make sure the filename matches exactly -->
+          <img src="assets/private/IMG_0207.jpg" alt="Alison — We are nothing but passing shadows" loading="lazy">
+          <div class="overlay-quote">“We are nothing but passing shadows.”</div>
+        </div>
 
-        <figcaption class="caption">
-          <strong>We are nothing but passing shadows</strong><br>
-          40×60 cm / 60×90 cm — Edition of 10<br>
-          <span class="edition">Only 10 prints available worldwide</span>
-        </figcaption>
-
-        <a class="buy" href="contact.html?subject=Private%20Collection%20—%20Alison">Inquire to purchase</a>
+        <div class="art-meta">
+          <div class="art-title">Alison — We are nothing but passing shadows</div>
+          <div class="art-sub">Archival pigment print (Hahnemühle Photo Rag) · 40×60 cm / 60×90 cm</div>
+          <span class="badge">Edition of 10 · Limited availability</span>
+          <a class="buy" href="contact.html?subject=Private%20Collection%20—%20Alison">Inquire to purchase</a>
+        </div>
       </figure>
     </div>
   </section>
 </main>
 
-<footer><div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div></footer>
+<footer>
+  <div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div>
+</footer>
 <script src="script.js"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
 </body>
