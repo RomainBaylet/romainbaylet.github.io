@@ -137,3 +137,33 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+// ===== Simple Lightbox for Private Collection =====
+(function(){
+  const frameImg = document.querySelector('.frame img');
+  const lb = document.getElementById('lb');
+  const lbImg = document.getElementById('lb-img');
+  const closeBtn = document.querySelector('.lightbox-close');
+
+  if(!frameImg || !lb || !lbImg) return;
+
+  frameImg.style.cursor = 'zoom-in';
+  frameImg.addEventListener('click', () => {
+    lbImg.src = frameImg.src;
+    lb.classList.add('show');
+    lb.setAttribute('aria-hidden', 'false');
+  });
+
+  const close = () => {
+    lb.classList.remove('show');
+    lb.setAttribute('aria-hidden', 'true');
+    lbImg.removeAttribute('src');
+  };
+
+  closeBtn.addEventListener('click', close);
+  lb.addEventListener('click', (e) => {
+    if(e.target === lb) close(); // click backdrop
+  });
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape') close();
+  });
+})();
