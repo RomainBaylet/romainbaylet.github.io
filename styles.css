@@ -366,3 +366,45 @@ body.fade-in { opacity: 1; }
   * { animation: none !important; transition: none !important; }
   body { opacity: 1 !important; }
 }
+/* ===== Luxe polish (drop at the END of styles.css) ===== */
+
+/* Hairline rule utility you can use anywhere */
+.hr {
+  margin: 28px 0;
+  border: 0;
+  border-top: 1px solid color-mix(in oklab, var(--line) 80%, transparent);
+}
+
+/* Refined headings rhythm */
+.hero-title {
+  letter-spacing: .3px;
+  line-height: 1.15;
+}
+
+/* Softer focus ring for clickable things */
+a:focus, button:focus, .buy:focus, .hamburger:focus {
+  outline: 2px solid color-mix(in oklab, #000 22%, transparent);
+  outline-offset: 3px;
+}
+
+/* Nicer text selection */
+::selection {
+  background: color-mix(in oklab, #000 10%, var(--accent) 8%);
+}
+
+/* Slightly warmer drop shadow utility (for frames/cards) */
+.shadow-soft {
+  box-shadow: 0 18px 50px rgba(0,0,0,.06);
+}
+
+/* Micro hover for links inside menus/captions */
+.menu-panel a:hover,
+.caption a:hover,
+.art-sub a:hover { opacity: .7; }
+
+/* Small-caps kicker utility (optional) */
+.kicker--sc {
+  font-variant-caps: all-small-caps;
+  letter-spacing: .2em;
+  opacity: .7;
+}
