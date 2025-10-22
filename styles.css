@@ -440,3 +440,25 @@ a:focus, button:focus, .buy:focus, .hamburger:focus {
   font-size: 14px;
 }
 .specs li { margin: 6px 0; }
+/* ===== Lightbox ===== */
+.lightbox{
+  position: fixed; inset: 0; display: none;
+  align-items: center; justify-content: center;
+  background: rgba(0,0,0,.7);
+  z-index: 2000;
+  padding: 24px;
+}
+.lightbox.show{ display: flex; }
+.lightbox img{
+  max-width: min(1100px, 92vw);
+  max-height: 88vh;
+  border-radius: 8px;
+  box-shadow: 0 30px 100px rgba(0,0,0,.5);
+}
+.lightbox-close{
+  position: absolute; top: 16px; right: 18px;
+  background: transparent; color: #fff; border: 0;
+  font-size: 34px; line-height: 1; cursor: pointer;
+  opacity: .8;
+}
+.lightbox-close:hover{ opacity: 1; }
