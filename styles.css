@@ -408,3 +408,35 @@ a:focus, button:focus, .buy:focus, .hamburger:focus {
   letter-spacing: .2em;
   opacity: .7;
 }
+/* ===== Details / accordion ===== */
+.specs {
+  margin-top: 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+}
+.specs[open] { background: #fff; }
+.specs > summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 12px 14px;
+  font-size: 12px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--text);
+  position: relative;
+}
+.specs > summary::after{
+  content: "+";
+  position: absolute; right: 14px; top: 10px;
+  font-size: 16px; line-height: 1;
+  opacity: .6;
+}
+.specs[open] > summary::after{ content: "–"; }
+
+.specs ul {
+  margin: 0; padding: 0 16px 14px 28px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.specs li { margin: 6px 0; }
