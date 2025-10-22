@@ -257,7 +257,7 @@ body.fade-in { opacity: 1; }
   justify-items: center;
 }
 
-.print-card {
+.print-card { max-width: 600px; }
   text-align: center;
   width: 100%;
   max-width: 680px;       /* smaller art column */
@@ -265,7 +265,7 @@ body.fade-in { opacity: 1; }
 }
 
 /* Elegant framed look (only on Private Collection) */
-.frame {
+.frame { width: 76%; }
   background: #fff;
   padding: clamp(8px, 1.5vw, 14px);
   border: 1px solid var(--line);
@@ -282,7 +282,7 @@ body.fade-in { opacity: 1; }
   transform: translateY(-2px);
 }
 
-.frame img {
+.frame img { max-width: 480px; }
   width: 100%;
   max-width: 520px;       /* ← smaller on laptops */
   height: auto;
