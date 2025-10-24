@@ -5,57 +5,18 @@
   <meta name="description" content="About Romain Baylet.">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/private/favicon.png?v=3">
+  <link rel="shortcut icon" type="image/png" href="assets/private/favicon.png?v=3">
+  <link rel="apple-touch-icon" href="assets/private/favicon.png?v=3">
+
   <meta name="theme-color" content="#ffffff">
-
-  <!-- 🖤 Elegant favicon -->
-  <link rel="icon" type="image/png" href="assets/private/favicon.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-
-  <style>
-    /* Elegant two-column layout for About section */
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center; /* centers text and image vertically */
-      min-height: 70vh;
-    }
-
-    .split img {
-      width: 100%;
-      max-width: 420px;
-      height: auto;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      object-fit: cover;
-      justify-self: center;
-    }
-
-    .split .text-block {
-      max-width: 540px;
-    }
-
-    @media (max-width: 768px) {
-      .split {
-        grid-template-columns: 1fr;
-        text-align: center;
-        min-height: auto;
-      }
-      .split img {
-        margin: 0 auto 32px;
-      }
-      .split .text-block {
-        margin: 0 auto;
-      }
-    }
-  </style>
 </head>
-
 <body>
+
 <header>
   <div class="container nav">
     <div class="brand"><a href="index.html">Romain Baylet</a></div>
@@ -63,9 +24,9 @@
       <span></span><span></span><span></span>
     </button>
     <div id="menu-panel" class="menu-panel" role="menu">
-      <a href="gallery.html" role="menuitem">Portfolio</a>
-      <a href="about.html" role="menuitem">About</a>
-      <a href="contact.html" role="menuitem">Contact</a>
+      <a href="gallery.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </div>
   </div>
 </header>
@@ -97,8 +58,6 @@
 </footer>
 
 <script src="script.js"></script>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
