@@ -2,23 +2,20 @@
 <html lang="en">
 <head>
   <title>Contact — Romain Baylet</title>
-  <meta name="description" content="Contact Romain Baylet.">
+  <meta name="description" content="Contact Romain Baylet for inquiries, collaborations, and fine art print requests.">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" href="assets/private/favicon.png">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/favicon/favicon.png">
-  <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="assets/favicon/favicon.png">
-
-  <!-- Fonts + Styles -->
+  <!-- Fonts & Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
 <header>
@@ -42,6 +39,7 @@
     If you don’t hear back, please check your spam folder.
   </p>
 
+  <!-- Contact form -->
   <form id="contact-form" class="contact-form reveal" style="--d:.15s" action="https://formspree.io/f/xnngypay" method="POST" novalidate>
     <input type="hidden" name="_subject" value="New inquiry from romainbaylet.com">
 
@@ -60,11 +58,14 @@
       <textarea class="textarea" id="message" name="message" required></textarea>
     </div>
 
+    <!-- honeypot -->
     <input type="text" name="_gotcha" style="display:none">
+
     <button class="btn" type="submit">Send message</button>
     <div class="form-status" aria-live="polite" role="status"></div>
   </form>
 
+  <!-- Social links -->
   <div class="reveal" style="--d:.25s; margin-top:28px; display:flex; justify-content:center; gap:30px; font-size:26px;">
     <a href="mailto:romainbaylet@icloud.com" aria-label="Email" title="Email" style="color:#111;">
       <i class="fa-solid fa-envelope"></i>
@@ -78,7 +79,11 @@
 <footer>
   <div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div>
 </footer>
+
 <script src="script.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
