@@ -3,9 +3,16 @@
 <head>
   <title>Elopement — Romain Baylet</title>
   <meta name="description" content="Elopement photography by Romain Baylet — intimate, timeless, sincere.">
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- 🖤 Elegant favicon -->
+  <link rel="icon" type="image/png" href="assets/private/favicon.png">
+
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 <header>
   <div class="container nav">
@@ -25,7 +32,7 @@
   <section class="reveal" style="--d:.2s">
     <a href="gallery.html" class="muted" style="font-size:13px;">← Back to Portfolio</a>
     <h1 class="hero-title" style="text-align:left; margin:8px 0 12px;">Elopement</h1>
-    <p class="muted" style="margin-bottom:22px">Quiet celebrations, honest moments.</p>
+    <p class="muted" style="margin-bottom:22px;">Quiet celebrations, honest moments.</p>
 
     <div class="grid">
       <!-- Swap with your images -->
@@ -39,8 +46,13 @@
   </section>
 </main>
 
-<footer><div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div></footer>
+<footer>
+  <div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div>
+</footer>
+
 <script src="script.js"></script>
-<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
