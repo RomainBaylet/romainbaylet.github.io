@@ -2,21 +2,17 @@
 <html lang="en">
 <head>
   <title>Private Collection — Romain Baylet</title>
-  <meta name="description" content="Limited, archival fine art prints by Romain Baylet — signed, numbered, and timeless.">
+  <meta name="description" content="Limited, archival fine art prints by Romain Baylet.">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
 
-  <!-- 🖤 Elegant favicon -->
-  <link rel="icon" type="image/png" href="assets/private/favicon.png">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/private/favicon.png?v=3">
+  <link rel="shortcut icon" type="image/png" href="assets/private/favicon.png?v=3">
+  <link rel="apple-touch-icon" href="assets/private/favicon.png?v=3">
 
-  <!-- Fonts & Styles -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 <header>
   <div class="container nav">
@@ -25,9 +21,9 @@
       <span></span><span></span><span></span>
     </button>
     <div id="menu-panel" class="menu-panel" role="menu">
-      <a href="gallery.html" role="menuitem">Portfolio</a>
-      <a href="about.html" role="menuitem">About</a>
-      <a href="contact.html" role="menuitem">Contact</a>
+      <a href="gallery.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </div>
   </div>
 </header>
@@ -36,7 +32,7 @@
   <section class="reveal" style="--d:.2s">
     <a href="gallery.html" class="muted" style="font-size:13px;">← Back to Portfolio</a>
     <h1 class="hero-title" style="text-align:left; margin:8px 0 8px;">Private Collection</h1>
-    <p class="private-intro">Limited edition fine art prints — created, signed, and numbered by Romain Baylet.</p>
+    <p class="private-intro">Limited edition fine art prints — created, signed, and numbered.</p>
 
     <div class="private-grid">
       <figure class="print-card">
@@ -44,7 +40,6 @@
           <img src="assets/private/IMG_0207.jpg" alt="We are nothing but passing shadows" loading="lazy">
           <div class="overlay-quote">“We are nothing but passing shadows.”</div>
         </div>
-
         <div class="art-meta">
           <details class="specs">
             <summary>Print details</summary>
@@ -53,18 +48,14 @@
               <li>Signed, numbered, and dated on verso</li>
               <li>Certificate of authenticity included</li>
               <li>Unframed. Museum framing available upon request</li>
-              <li>Worldwide shipping — typical lead time: 2–3 weeks</li>
+              <li>Worldwide shipping. Typical lead time: 2–3 weeks</li>
             </ul>
           </details>
 
           <div class="art-title">We are nothing but passing shadows</div>
-          <div class="art-sub">Archival pigment print · 50×70 cm</div>
+          <div class="art-sub">Archival pigment print (Hahnemühle Photo Rag) · 40×60 cm / 60×90 cm</div>
           <span class="badge">Edition of 10 · Limited availability</span>
           <a class="buy" href="contact.html?subject=Private%20Collection%20—%20Alison">Inquire to purchase</a>
-
-          <p class="muted" style="font-size:12px; margin-top:6px;">
-            Questions about framing or shipping? <a href="contact.html">Get in touch</a> — replies within 48 hours.
-          </p>
         </div>
       </figure>
     </div>
@@ -75,33 +66,7 @@
   <div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div>
 </footer>
 
-<!-- Script + Lightbox -->
 <script src="script.js"></script>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Lightbox functionality
-  const lb = document.getElementById('lb');
-  const lbImg = document.getElementById('lb-img');
-  const closeBtn = document.querySelector('.lightbox-close');
-
-  document.querySelectorAll('.frame img').forEach(img => {
-    img.addEventListener('click', () => {
-      lb.classList.add('show');
-      lbImg.src = img.src;
-      lbImg.alt = img.alt;
-    });
-  });
-
-  closeBtn.addEventListener('click', () => lb.classList.remove('show'));
-  lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('show'); });
-</script>
-
-<!-- Lightbox modal -->
-<div id="lb" class="lightbox" aria-hidden="true">
-  <button class="lightbox-close" aria-label="Close">&times;</button>
-  <img id="lb-img" alt="">
-</div>
-
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
