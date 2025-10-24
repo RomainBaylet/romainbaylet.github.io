@@ -3,8 +3,7 @@
 <head>
   <title>Private Collection — Romain Baylet</title>
   <meta name="description" content="Limited, archival fine art prints by Romain Baylet.">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/private/favicon.png?v=3">
@@ -21,9 +20,9 @@
       <span></span><span></span><span></span>
     </button>
     <div id="menu-panel" class="menu-panel" role="menu">
-      <a href="gallery.html">Portfolio</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="gallery.html" role="menuitem">Portfolio</a>
+      <a href="about.html" role="menuitem">About</a>
+      <a href="contact.html" role="menuitem">Contact</a>
     </div>
   </div>
 </header>
@@ -56,6 +55,10 @@
           <div class="art-sub">Archival pigment print (Hahnemühle Photo Rag) · 40×60 cm / 60×90 cm</div>
           <span class="badge">Edition of 10 · Limited availability</span>
           <a class="buy" href="contact.html?subject=Private%20Collection%20—%20Alison">Inquire to purchase</a>
+
+          <p class="muted" style="font-size:12px; margin-top:6px;">
+            Questions about framing or shipping? <a href="contact.html">Get in touch</a> — replies within 48 hours.
+          </p>
         </div>
       </figure>
     </div>
@@ -65,8 +68,12 @@
 <footer>
   <div class="container">© <span id="year"></span> Romain Baylet. All rights reserved.</div>
 </footer>
-
 <script src="script.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+
+<div id="lb" class="lightbox" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <img id="lb-img" alt="">
+</div>
 </body>
 </html>
