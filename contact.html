@@ -5,13 +5,14 @@
   <meta name="description" content="Contact Romain Baylet.">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/private/favicon.png?v=3">
-  <link rel="shortcut icon" type="image/png" href="assets/private/favicon.png?v=3">
-  <link rel="apple-touch-icon" href="assets/private/favicon.png?v=3">
-
   <meta name="theme-color" content="#ffffff">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon/favicon.png">
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/favicon/favicon.png">
+
+  <!-- Fonts + Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -43,18 +44,22 @@
 
   <form id="contact-form" class="contact-form reveal" style="--d:.15s" action="https://formspree.io/f/xnngypay" method="POST" novalidate>
     <input type="hidden" name="_subject" value="New inquiry from romainbaylet.com">
+
     <div class="field">
       <label for="name">Name *</label>
       <input class="input" id="name" name="name" type="text" required>
     </div>
+
     <div class="field">
       <label for="email">Email address *</label>
       <input class="input" id="email" name="email" type="email" required>
     </div>
+
     <div class="field">
       <label for="message">Message *</label>
       <textarea class="textarea" id="message" name="message" required></textarea>
     </div>
+
     <input type="text" name="_gotcha" style="display:none">
     <button class="btn" type="submit">Send message</button>
     <div class="form-status" aria-live="polite" role="status"></div>
